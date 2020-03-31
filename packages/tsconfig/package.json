@@ -1,0 +1,17 @@
+{
+  "name": "@chores/tsconfig",
+  "version": "1.0.0",
+  "description": "Shared TypeScript config",
+  "keywords": [
+    "tsconfig"
+  ],
+  "author": "mro <254225961@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "files": [
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
