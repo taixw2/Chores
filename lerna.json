@@ -3,7 +3,7 @@
     "packages/*"
   ],
   "version": "independent",
-  "commands": {
+  "command": {
     "publish": {
       "message": "chore(release): publish %v"
     }
