@@ -4,14 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    # Setup .npmrc file to publish to GitHub Packages
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - uses: taixw2/npm-publish2-action
-      with:
-        workspaces: 'packages/tsconfig,packages/test-action'
-        
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Publish Npm Registry
+        uses: taixw2/npm-publish2-action@master
+        with:
+          workspaces: packages/tsconfig,packages/test-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
