@@ -1,0 +1,17 @@
+name: Node.js Package
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Setup .npmrc file to publish to GitHub Packages
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: taixw2/npm-publish2-action
+      with:
+        workspaces: 'packages/tsconfig,packages/test-action'
+        
