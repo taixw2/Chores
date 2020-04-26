@@ -1,18 +1,19 @@
 {
   "name": "@chores/tsconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared TypeScript config",
   "keywords": [
     "tsconfig"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "mro <254225961@qq.com>",
   "homepage": "",
   "license": "MIT",
   "files": [
     "tsconfig.json"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "gitHead": "1eca0da18195b7ab505ee1c052dae21e3074cc6d"
 }
